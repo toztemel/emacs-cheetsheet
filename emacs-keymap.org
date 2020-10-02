@@ -1,0 +1,125 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+https://www.gnu.org/software/emacs/tour/
+
+* Exiting
+
+| Key     | ACtion                       |
+|---------+------------------------------|
+| C-x C-c | kill emacs                   |
+| C-z     | suspend emacs ( on terminal) |
+| C-g     | quit command                 |
+|         |                              |
+
+
+* HELP
+
+| Key         | Action |
+|-------------+--------|
+| C-h C-h     | help   |
+| a <pattern> | keys matching the pattern |
+
+
+* Buffers:
+| Key            | Action               |
+|----------------+----------------------|
+| C-x b          | switch buffers       |
+| C-x right/left | cycle buffers        |
+| C-x C-f        | open file            |
+| C-x C-s        | save file            |
+| C-x C-w        | save file as         |
+| C-x k          | kill buffer          |
+| M-x ... RET    | rename a buffer/file |
+|                |                      |
+
+
+* Windows
+C-x o : move to next window
+C-x 0 : close active window
+C-x 1: close other windows
+C-x 2 : split horizontal
+C-x 3 : split vertical
+
+
+* Copy- Paste Text
+M-C : Copy
+M-v : Paste
+
+C-space: region select
+
+C-w : kill region
+C-k : kill region between point and end of current line
+M-x : kill region without deleting
+
+C-y : yank region from kill ring
+M-y/Y : move to previous/next item in the kill ring
+
+C-_ : undo
+
+
+* Search - Find - Replaceq
+C-s : search
+C-r : search backwards
+M-% : query replace ( space replace, n skip, ! replace all)
+
+
+* Wrapping Text
+M-q : wrap text
+
+
+* Mhoving the point
+C-left/right : move one word
+left/right C-up/down: move up/down a page
+
+M- : move to end of buffer
+
+C-v  : scroll down, page up
+M-v  : scroll up, page down
+C-l  : toggle screen & center by cursor & toggles top-down
+
+C-b  : Backward
+C-f  : Forward
+
+C-p  : Previous line
+C-n  : Next line
+
+M-b  : Backward by word
+M-f  : Forward by word
+
+
+* Daemon mode
+https://www.emacswiki.org/emacs/EmacsAsDaemon
+** Starting Daemon
+emacs --daemon: start emacs daemon
+emacs --fg-daemon: start emacs daemon foreground
+** Stopping Daemon
+*** From inside
+| kill-emacs              | command |
+| save-buffers-kill-emacs | command |
+*** From outside
+emacsclient -e '(kill-emacs)': kill with client
+emacsclient -e '(client-save-kill-emacs)': kill and save with client
+
+
+* Client
+emacsclient -t: run client in terminal
+emacsclient -c: create frame
+
+
+* Modes
+M-x mode-name  switch modes
+list of modes: https://kb.iu.edu/d/acyg
+
+
+* Org mode
+file names ending with .org are opened in Org mode
+Heading starts with *'s
+Comments starts with #
+<TAB>
+S-<TAB>
+M-<UP>/<DOWN> move entry up/down
+M-<LEFT>/<RIGHT> promote/demote heading
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Org-Mode.html
+
+
